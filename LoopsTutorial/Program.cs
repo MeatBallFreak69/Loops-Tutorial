@@ -10,9 +10,9 @@ namespace LoopsTutorial
     {
         static void Main(string[] args)
         {
-            for(int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
-                Console.WriteLine("Hello!");       
+                Console.WriteLine("Hello!");
             }
             Console.WriteLine(" ");
             for (int j = 1; j <= 10;)
@@ -65,7 +65,7 @@ namespace LoopsTutorial
             int numEven = 0;
             int input;
             Console.WriteLine("Enter 5 numbers and the amount of even numbers will be printed");
-            for (int g = 0; g <= 10; g++)
+            for (int g = 0; g <= 9; g++)
             {
                 Console.WriteLine("Please enter 10 numbers");
                 if (Int32.TryParse(Console.ReadLine(), out input))
@@ -79,12 +79,57 @@ namespace LoopsTutorial
                 {
                     Console.WriteLine("That is not an integer! Try again.");
                 }
-                
-                
+
+
             }
             Console.WriteLine($"You entered {numEven} even numbers");
-            Console.ReadLine();
+            Console.WriteLine(" ");
+            Console.WriteLine("While Questions");
+            int l = 1;
+            while (l <= 10)
+            {
+                Console.WriteLine(l);
+                l = l + 1;
+            }
+            Console.WriteLine(" ");
+            int v = 10;
+            while (v >= 1)
+            {
+                Console.WriteLine(v);
+                v = v - 1;
+            }
+            Console.WriteLine(" ");
+            int k = 10;
+            while (k >= 2)
+            {
+                Console.WriteLine(k);
+                k = k - 2;
+            }
+            Console.WriteLine(" ");
+            double number;
+            Console.WriteLine("Please enter a number");
+            while (!Double.TryParse(Console.ReadLine(), out number))
+                Console.WriteLine("Invalid double, try again.");
+            Console.WriteLine($"Thanks for {number}");
+            Console.WriteLine(" ");
+            bool stop = true;
+            while(stop)
+            {
+                Console.WriteLine("Will it ever stop?");
+                stop = false;
+            }
+            Console.WriteLine(" ");
+            int selection;
+            do
+            {
+                Console.WriteLine("Who is the better captain?");
+                Console.WriteLine("1 - Captain Picard");
+                Console.WriteLine("2 - Captain Kirk");
+                selection = Convert.ToInt32(Console.ReadLine());
+            } while (selection != 1);
+            Console.WriteLine("Correct");
 
+            Console.ReadLine();
         }
     }
 }
